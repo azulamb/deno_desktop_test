@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "build:native": "deno desktop ./main.ts",
+    "build:cef": "deno desktop --backend cef --allow-read --allow-write ./main.ts",
+    "start": "./deno_desktop_test/laufey.exe --runtime ./deno_desktop_test/deno_desktop_test.dll"
+  }
+}
