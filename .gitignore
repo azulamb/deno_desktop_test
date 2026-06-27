@@ -1,1 +1,2 @@
-deno_desktop_test/*
+dist/*
+log.txt
