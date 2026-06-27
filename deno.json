@@ -1,7 +1,21 @@
 {
   "tasks": {
-    "build:native": "deno desktop ./main.ts",
-    "build:cef": "deno desktop --backend cef --allow-read --allow-write ./main.ts",
-    "start": "./deno_desktop_test/laufey.exe --runtime ./deno_desktop_test/deno_desktop_test.dll"
+    "build": "deno desktop --backend cef --allow-read --allow-write main.ts",
+    "start": "./dist/laufey.exe --runtime ./dist/dist.dll"
+  },
+  "desktop": {
+    "app": {
+      "name": "Deno desktop test",
+      "identifier": "com.example.ddt",
+      "icons": {
+        "windows": "./docs/favicon.ico"
+      }
+    },
+    "backend": "cef",
+    "output": {
+      "windows": "./dist"
+    },
+    "release": { "baseUrl": "https://updates.example.com" },
+    "errorReporting": { "url": "https://errors.example.com/report" }
   }
 }
